@@ -3,7 +3,7 @@
  * 
  * @author CodePack Contributors
  * @license MIT
- * @version 1.0.0
+ * @version 1.0.22
  */
 
 const fs = require('fs-extra');

@@ -17,7 +17,7 @@ Compress entire codebases into AI-friendly single files optimized for ChatGPT, C
 ## 📦 Installation
 
 ```bash
-npm install -g codepack
+npm install -g @zubenelakrab/codepack
 ```
 
 ## 🎯 Usage

@@ -11,7 +11,7 @@ const { program } = require('commander');
 const CodePack = require('../src/index');
 
 program
-  .version('1.0.0')
+  .version('1.0.22')
   .description('Compress entire codebases into AI-friendly single files')
   .option('-i, --input <path>', 'Input directory path', '.')
   .option('-o, --output <file>', 'Output file path', 'codepack-output.md')
