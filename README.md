@@ -52,11 +52,14 @@ codepack -s -o smart.md
 # Exclude specific patterns
 codepack -e "node_modules,dist,*.log,custom-folder"
 
+# Set custom max file size (500KB)
+codepack -m 500
+
 # Verbose output with detailed file processing
 codepack -v
 
-# Combine options
-codepack -s -v -i ../my-project -o optimized-output.md
+# Combine options with custom file size limit
+codepack -s -v -m 200 -i ../my-project -o optimized-output.md
 ```
 
 ## ⚙️ Command Line Options
@@ -68,6 +71,7 @@ codepack -s -v -i ../my-project -o optimized-output.md
 | `-e, --exclude <patterns>` | Exclude patterns (comma-separated) | `node_modules,dist,build,.git,venv` |
 | `-c, --compact` | Compact mode - minimize output size | `false` |
 | `-s, --smart` | Smart AI-optimized mode with intelligent grouping | `false` |
+| `-m, --max-size <kb>` | Maximum file size in KB | `100` |
 | `-v, --verbose` | Verbose output with processing details | `false` |
 | `-h, --help` | Show help | - |
 
@@ -102,7 +106,7 @@ CodePack intelligently excludes:
 - **Version Control**: `.git`, `.svn`
 - **Logs & Temp**: `*.log`, `*.tmp`, `.DS_Store`
 - **Package Locks**: `package-lock.json`, `yarn.lock`
-- **Large Files**: Files >100KB automatically excluded
+- **Large Files**: Files >100KB automatically excluded (configurable with `-m` flag)
 
 ## 💡 Use Cases
 
