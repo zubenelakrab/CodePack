@@ -3,7 +3,7 @@
  * 
  * @author CodePack Contributors
  * @license MIT
- * @version 1.0.22
+ * @version 1.0.23
  */
 
 const fs = require('fs-extra');
@@ -26,9 +26,10 @@ class CodePack {
       '.DS_Store', 'Thumbs.db'
     ];
     this.verbose = options.verbose || false;
-    this.maxFileSize = 100000; // 100KB max per file
-    this.compact = options.compact || false; // New: compact mode
-    this.smartCompress = options.smart || false; // Smart AI compression
+    // Convert KB to bytes (default 100KB)
+    this.maxFileSize = (parseInt(options.maxSize) || 100) * 1024;
+    this.compact = options.compact || false;
+    this.smartCompress = options.smart || false;
   }
 
   async compress() {
@@ -45,7 +46,8 @@ class CodePack {
       console.log(`📊 Compressed ${files.length} files`);
       
       if (this.skippedFiles.length > 0) {
-        console.log(`⚠️  Skipped ${this.skippedFiles.length} large files (>100KB):`);
+        const maxSizeKB = Math.round(this.maxFileSize / 1024);
+        console.log(`⚠️  Skipped ${this.skippedFiles.length} large files (>${maxSizeKB}KB):`);
         this.skippedFiles.forEach(file => {
           console.log(`   - ${file.name} (${file.size}KB)`);
         });
