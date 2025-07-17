@@ -4,7 +4,7 @@
   "description": "Compress entire codebases into AI-friendly single files optimized for ChatGPT, Claude, and other AI tools",
   "main": "src/index.js",
   "bin": {
-    "codepack": "./bin/codepack.js"
+    "codepack": "bin/codepack.js"
   },
   "scripts": {
     "start": "node src/index.js",
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zubenelakrab/CodePack.git"
+    "url": "git+https://github.com/zubenelakrab/CodePack.git"
   },
   "bugs": {
     "url": "https://github.com/zubenelakrab/CodePack/issues"
