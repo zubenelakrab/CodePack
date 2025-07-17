@@ -1,0 +1,23 @@
+# Source files
+src/test/
+test/
+
+# Development files
+.gitignore
+.git/
+CONTRIBUTING.md
+
+# Output files
+*.md
+!README.md
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
