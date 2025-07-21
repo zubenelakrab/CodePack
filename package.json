@@ -1,14 +1,16 @@
 {
   "name": "@zubenelakrab/codepack",
-  "version": "1.0.24",
-  "description": "Compress entire codebases into AI-friendly single files optimized for ChatGPT, Claude, and other AI tools",
+  "version": "1.1.0",
+  "description": "Compress entire codebases into AI-friendly single files with 9 output formats optimized for ChatGPT, Claude, and other AI tools",
   "main": "src/index.js",
   "bin": {
     "codepack": "bin/codepack.js"
   },
   "scripts": {
     "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [
     "codebase",
@@ -18,9 +20,15 @@
     "claude",
     "cli",
     "markdown",
+    "yaml",
+    "toml", 
+    "json",
+    "messagepack",
     "code-analysis",
     "developer-tools",
-    "ai-tools"
+    "ai-tools",
+    "all-formats",
+    "multiple-formats"
   ],
   "author": "",
   "license": "MIT",
@@ -37,8 +45,17 @@
   },
   "homepage": "https://github.com/zubenelakrab/CodePack#readme",
   "dependencies": {
+    "@iarna/toml": "^2.2.5",
     "commander": "^9.4.1",
+    "fs-extra": "^11.1.1",
     "glob": "^8.1.0",
-    "fs-extra": "^11.1.1"
+    "ignore": "^7.0.5",
+    "js-yaml": "^4.1.0",
+    "msgpack5": "^6.0.2",
+    "ora": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.4"
   }
 }
