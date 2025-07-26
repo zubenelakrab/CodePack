@@ -2,8 +2,9 @@
 
 Compress entire codebases into AI-friendly single files with **9 output formats** optimized for ChatGPT, Claude, and other AI tools. Transform complex projects into digestible files that preserve context while minimizing token usage.
 
-## 🆕 What's New in v1.1.0
+## 🆕 What's New in v1.1.2
 
+- **🔒 Privacy Enhancement** - Removed internal evolution ID from output
 - **🎯 `--all-formats` command** - Generate all 9 formats with a single command
 - **📊 9 output formats** - Markdown, JSON, YAML, TOML, MessagePack, JSON-LD, DSL, and more
 - **📋 Enhanced Markdown** - Table of contents, quick start guides, architecture diagrams
