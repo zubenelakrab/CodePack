@@ -270,8 +270,7 @@ class CodePack {
     this.gitignoreFilter = null;
     this.progressObserver = new ProgressObserver();
     this.progressObserver.subscribe(new ConsoleProgressObserver());
-    this.generation = 2; // Evolution marker
-    this.evolutionId = 'LEGENDARY-GEN2-' + Date.now();
+    this.generation = 2;
   }
   validateInputPath(inputPath) {
     try {
@@ -343,7 +342,6 @@ class CodePack {
       if (!this.dryRun) {
         console.log(`✅ CodePack Gen2 Evolution Complete! Output: ${this.outputPath}`);
         console.log(`📊 Evolved Compression: ${files.length} files → ${Math.round(outputSize / DEFAULTS.BYTES_PER_KB)}KB in ${duration}ms`);
-        console.log(`🧬 Evolution ID: ${this.evolutionId}`);
       }
       if (this.skippedFiles.length > 0) {
         const maxSizeKB = Math.round(this.maxFileSize / DEFAULTS.BYTES_PER_KB);
