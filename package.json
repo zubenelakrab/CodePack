@@ -1,6 +1,6 @@
 {
   "name": "@zubenelakrab/codepack",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Compress entire codebases into AI-friendly single files with 9 output formats optimized for ChatGPT, Claude, and other AI tools",
   "main": "src/index.js",
   "bin": {
